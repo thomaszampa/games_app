@@ -1,0 +1,1 @@
+json.your_lotto_number @your_number
