@@ -16,4 +16,15 @@ class Api::ExamplePagesController < ApplicationController
     @your_number = lotto_numbers
     render "lotto.json.jbuilder"
   end
+
+  def ninety_nine_bottles_method
+    beer = []
+    index = 99
+    99.times do
+      beer << "#{index} bottles of beer on the wall, #{index} bottles of beer. You take one down, pass it around, #{index - 1} bottles of beer on the wall!"
+      index -= 1
+    end
+    @ninety_nine_bottles = beer
+    render "99_bottles.json.jbuilder"
+  end
 end
